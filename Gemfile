@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use simple_form for form
 gem 'simple_form'
+# Use haml template engine
+gem 'haml'
+# Use haml-rails, convert erb to haml
+gem 'haml-rails', "~> 0.9"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
