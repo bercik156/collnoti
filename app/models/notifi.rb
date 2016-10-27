@@ -26,13 +26,26 @@ class Notifi < ApplicationRecord
     elsif self.category_id == 2
       cost = '10'
       self.update_column(:cost, cost)
+      deadline = days_left(1)
+      self.update_column(:deadline, deadline)
     else
       cost = '1'
       self.update_column(:cost, cost)
+      deadline = days_left(3)
+      self.update_column(:deadline, deadline)
     end
 
   end
 
-
+  def days_left(data)
+    deadline_day = Date.today + data.days
+    if deadline_day.wday == 0
+      deadline_day += 1.day
+    elsif deadline_day.wday == 6
+      deadline_day += 2.days
+    else
+      deadline_day
+    end
+  end
 
 end
