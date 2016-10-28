@@ -4,7 +4,16 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Collnoti
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
-    = yield
+    .conteiner-fluid
+      .col-sm-10.col-sm-offset-1
+        .jumbotron.text-center
+          %h1 Collnoti
+        - if flash[:notice]
+          .alert.alert-success
+            = flash[:notice]
+        .panel.panel-default
+          .panel-body
+            = yield

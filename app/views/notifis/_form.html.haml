@@ -1,8 +1,12 @@
 = simple_form_for(@notifi) do |f|
   = f.error_notification
-  .form-inputs
+  .form-inputs.input-group-sm
+    %strong Category:
     = f.select :category_id, Category.all.map {|d| [d,d.id] }
+    %br
+    %br
     = f.input :description, class: "form-control"
     = f.input :email
+    = f.hidden_field :status, value: 0
   .form-actions
     = f.button :submit, "Send"

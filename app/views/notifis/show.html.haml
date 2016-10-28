@@ -1,8 +1,16 @@
-= notice
-%br
-%strong
-  = @notifi.email
-  %br
-= @notifi.description
-%br
-= @notifi.deadline
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title Your Notification
+  .panel-body
+    %strong
+      E-Mail:
+      = @notifi.email
+      %br
+      .panel.panel-default
+        .panel-body
+          Description:
+          %br
+            = @notifi.description
+  .panel-footer
+    Deadline:
+    = @notifi.deadline

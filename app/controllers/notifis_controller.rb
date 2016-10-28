@@ -57,6 +57,6 @@ class NotifisController < ApplicationController
   end
 
   def notifi_params
-    params.require(:notifi).permit(:description, :category_id, :email, :cost, :deadline)
+    params.require(:notifi).permit(:description, :category_id, :email, :cost, :deadline, :status)
   end
 end
