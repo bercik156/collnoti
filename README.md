@@ -1,24 +1,20 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== README
 
-Things you may want to cover:
+This project present a Rails application-collecting notification from users
 
-* Ruby version
+============================================
 
-* System dependencies
+* Ruby version <tt> 2.3.1 </tt>
+* Rails version <tt> 5.0.0.1 </tt>
 
-* Configuration
+* Gem:
+    - Bootstrap
+    - simple_form
 
-* Database creation
+* Install <tt> bundle install </tt> 
 
-* Database initialization
+* Migrate db <tt> rails db:migrate </tt>
+* Seed db <tt> rails db:seed </tt>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Start <tt> rails s </tt>
